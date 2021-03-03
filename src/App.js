@@ -13,7 +13,20 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-
+        <p style={{ color: 'blue', fontSize: 46 - 12 }}>
+          Hello Ауад Майз!
+        </p>
+        <p>
+          {count}
+        </p>
+        <p>
+          {flag && 'Flag is true'}
+        </p>
+        <p style={{ color: 'red' }}> undefined {undefined} , null  {null}, true  {true} и false {false}
+        </p>
+        <p>
+          {flag2 ? 'Flag is true' : 'Flag is false'}
+        </p>
         <a
           className="App-link"
           href="https://reactjs.org"
