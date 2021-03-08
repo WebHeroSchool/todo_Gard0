@@ -1,9 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
+import { count, length } from './number.js';
 
-const flag = true;
-const flag2 = false;
-const count = 22;
+const result = count * length;
 
 function App() {
   return (
@@ -13,19 +12,8 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <p style={{ color: 'blue', fontSize: 46 - 12 }}>
-          Hello Ауад Майз!
-        </p>
         <p>
-          {count}
-        </p>
-        <p>
-          {flag && 'Flag is true'}
-        </p>
-        <p style={{ color: 'red' }}> undefined {undefined} , null  {null}, true  {true} и false {false}
-        </p>
-        <p>
-          {flag2 ? 'Flag is true' : 'Flag is false'}
+          Результат ={result}
         </p>
         <a
           className="App-link"
