@@ -1,11 +1,14 @@
 import React from 'react';
 import ItemList from '../ItemList/ItemList';
-import Item from '../Item/Item';
+import Footer from '../Footer/Footer';
+
+const todoItem = 'Написать приложение';
 
 const App = () => (
   <div>
     <h1>Важные дела</h1>
-    <ItemList />
+    <ItemList todoItem={todoItem} />
+    <Footer count={3} />
   </div>
 );
 
