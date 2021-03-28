@@ -2,7 +2,7 @@ import React from 'react';
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
 
-const todoItem = 'Написать приложение';
+const todoItem = 'Написать lkjbjh';
 
 const App = () => (
   <div>
