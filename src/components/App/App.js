@@ -2,14 +2,26 @@ import React from 'react';
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
 
-const todoItem = 'Написать lkjbjh';
+const App = () => {
+  const items = [
+    {
+      value: 'Написать приложение'
+    },
+    {
+      value: 'прописать props'
+    },
+    {
+      value: 'сделать все дела'
+    }
+  ];
 
-const App = () => (
-  <div>
-    <h1>Важные дела</h1>
-    <ItemList todoItem={todoItem} />
-    <Footer count={3} />
-  </div>
-);
+  return (
+    <div>
+      <h1>Важные дела</h1>
+      <ItemList items={items} />
+      <Footer count={6} />
+    </div>
+  );
+};
 
 export default App;
