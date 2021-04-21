@@ -1,6 +1,7 @@
 import React from 'react';
 import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
+import './App.css';
 
 const App = () => {
   const items = [
@@ -16,7 +17,7 @@ const App = () => {
   ];
 
   return (
-    <div>
+    <div className='wrap'>
       <h1>Важные дела</h1>
       <ItemList items={items} />
       <Footer count={6} />
