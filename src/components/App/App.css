@@ -1,5 +1,7 @@
 .wrap {
-    font-family: Roboto;
     margin: auto;
     width: 200px;
+}
+.wrap__title{
+    font-family: Arial, Helvetica, sans-serif;
 }

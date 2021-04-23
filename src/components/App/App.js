@@ -18,7 +18,7 @@ const App = () => {
 
   return (
     <div className='wrap'>
-      <h1>Важные дела</h1>
+      <h1 className='wrap__title'>Важные дела</h1>
       <ItemList items={items} />
       <Footer count={6} />
     </div>
