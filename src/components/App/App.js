@@ -3,16 +3,20 @@ import ItemList from '../ItemList/ItemList';
 import Footer from '../Footer/Footer';
 import styles from './App.module.css';
 
+
 const App = () => {
   const items = [
     {
-      value: 'Написать приложение'
+      value: 'Написать приложение',
+      isDone: true
     },
     {
-      value: 'прописать props'
+      value: 'прописать props',
+      isDone: false
     },
     {
-      value: 'сделать все дела'
+      value: 'сделать все дела',
+      isDone: true
     }
   ];
 
