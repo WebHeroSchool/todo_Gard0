@@ -1,10 +1,27 @@
 import React from 'react';
-import Item from '../Item/Item';
+import Item from '../Item/Item.js';
+import styles from '../Item/Item.module.css';
+import Checkbox from '@material-ui/core/Checkbox';
 
-const ItemList = ({ items }) => (<ul>
-  {items.map(item => <li key={item.value}>
-    <Item value={item.value} isDone={item.isDone} />
-  </li>)}
-</ul>);
+
+const ItemList = ({item}) => (<ul className={styles.list}>
+    {item.map(item => (
+        <li className={styles.listItem}><Checkbox
+        value="checkedA"
+        inputProps={{
+          'aria-label': 'primary checkbox'
+        }}
+      />
+      <Item taskText={item.text} taskDone={item.isDone}/>
+      <Checkbox
+        value="checkedC"
+        indeterminate
+        inputProps={{
+          'aria-label': 'indeterminate checkbox'
+        }}
+      />
+        </li>
+    ))}
+</ul>)
 
 export default ItemList;

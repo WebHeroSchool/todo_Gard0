@@ -1,12 +1,14 @@
 import React from 'react';
-import ItemList from '../ItemList/ItemList';
-import Footer from '../Footer/Footer';
-import styles from './App.module.css';
+import styles from '../App/App.module.css';
 import InputItem from '../InputItem/InputItem.js';
+import ItemList from '../ItemList/ItemList.js';
+import Footer from '../Footer/Footer.js';
+
 
 
 const App = () => {
-  const items = [
+
+  const toDo = [
     {
       value: 'Написать приложение',
       isDone: true
@@ -17,19 +19,24 @@ const App = () => {
     },
     {
       value: 'сделать все дела',
-      isDone: true
+      isDone: false
     }
-  ];
+  ]
+
+  let toDoFilter = toDo.filter(toDo => toDo.isDone === false);
+  let toDoList = toDoFilter.length;
+
+
 
   return (
 
     <div className={styles.wrap}>
-
-      <h1 className={styles.title}>Важные дела</h1>
+      <h2 className={styles.title}>Важные дела</h2>
       <InputItem />
-      <ItemList items={items} />
-      <Footer count={6} />
-
+      <div>
+        <ItemList item={toDo} />
+        <Footer count={toDoList} />
+      </div>
     </div >
   );
 };

@@ -1,7 +1,27 @@
-.item {
+body {
+    text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+    /* Убираем маркеры */
+}
+
+.inProgress {
     color: #333;
+    padding: 10px;
 }
 
 .done {
-    color: #c4c4c4;
+    text-decoration: line-through;
+    color: #a79c9c;
+}
+
+.list {
+    width: 70%;
+}
+
+.listItem {
+    display: flex;
+    justify-content: space-between
 }
