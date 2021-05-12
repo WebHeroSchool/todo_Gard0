@@ -1,5 +1,5 @@
 import React from 'react';
-import Item from '../Item/Item.js';
+import Item from '../Item/Item.jsx';
 import styles from '../Item/Item.module.css';
 import Checkbox from '@material-ui/core/Checkbox';
 
@@ -9,7 +9,7 @@ const ItemList = ({ item }) => (
     {item.map(item => (
       <li className={styles.listItem}>
         <Checkbox
-          value="checkedA"
+          value="checkedB"
           inputProps={{
             'aria-label': 'primary checkbox'
           }}

@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from '../App/App.module.css';
-import InputItem from '../InputItem/InputItem.js';
-import ItemList from '../ItemList/ItemList.js';
-import Footer from '../Footer/Footer.js';
+import InputItem from '../InputItem/InputItem.jsx';
+import ItemList from '../ItemList/ItemList.jsx';
+import Footer from '../Footer/Footer.jsx';
 
 
 

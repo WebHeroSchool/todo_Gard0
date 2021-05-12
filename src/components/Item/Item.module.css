@@ -6,6 +6,10 @@ li {
     list-style-type: none;
     /* Убираем маркеры */
 }
+.input {
+    display: flex;
+    justify-content: center;
+}
 
 .inProgress {
     color: #333;
@@ -18,10 +22,11 @@ li {
 }
 
 .list {
-    width: 70%;
+    width: 90%;
 }
 
 .listItem {
+    width: 300px;
     display: flex;
     justify-content: space-between
 }
