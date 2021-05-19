@@ -3,11 +3,11 @@ import Item from '../Item/Item.jsx';
 import styles from '../Item/Item.module.css';
 import Checkbox from '@material-ui/core/Checkbox';
 
-
 const ItemList = ({ item }) => (
+
   <ul className={styles.list}>
     {item.map(item => (
-      <li className={styles.listItem}>
+      <li key={item.id} className={styles.listItem}>
         <Checkbox
           value="checkedB"
           inputProps={{

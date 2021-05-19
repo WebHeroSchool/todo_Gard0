@@ -9,14 +9,17 @@ class App extends React.Component {
   render() {
     const toDo = [
       {
+        id: 1,
         value: 'Написать приложение',
         isDone: true
       },
       {
+        id: 2,
         value: 'прописать props',
         isDone: false
       },
       {
+        id: 3,
         value: 'сделать все дела',
         isDone: false
       }
