@@ -1,37 +1,47 @@
 import React from 'react';
-import ItemList from '../ItemList/ItemList';
-import Footer from '../Footer/Footer';
-import styles from './App.module.css';
-import InputItem from '../InputItem/InputItem.js';
+import styles from '../App/App.module.css';
+import InputItem from '../InputItem/InputItem.jsx';
+import ItemList from '../ItemList/ItemList.jsx';
+import Footer from '../Footer/Footer.jsx';
 
 
-const App = () => {
-  const items = [
-    {
-      value: 'Написать приложение',
-      isDone: true
-    },
-    {
-      value: 'прописать props',
-      isDone: false
-    },
-    {
-      value: 'сделать все дела',
-      isDone: true
-    }
-  ];
+class App extends React.Component {
+  render() {
+    const toDo = [
+      {
+        id: 1,
+        value: 'Написать приложение',
+        isDone: true
+      },
+      {
+        id: 2,
+        value: 'прописать props',
+        isDone: false
+      },
+      {
+        id: 3,
+        value: 'сделать все дела',
+        isDone: false
+      }
+    ]
 
-  return (
+    let toDoFilter = toDo.filter(toDo => toDo.isDone === false);
+    let toDoList = toDoFilter.length;
 
-    <div className={styles.wrap}>
 
-      <h1 className={styles.title}>Важные дела</h1>
-      <InputItem />
-      <ItemList items={items} />
-      <Footer count={6} />
 
-    </div >
-  );
+    return (
+
+      <div className={styles.wrap}>
+        <h2 className={styles.title}>Важные дела</h2>
+        <InputItem />
+        <div>
+          <ItemList item={toDo} />
+          <Footer count={toDoList} />
+        </div>
+      </div >
+    );
+  };
 };
 
 export default App;
