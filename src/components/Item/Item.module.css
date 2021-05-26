@@ -4,7 +4,6 @@ body {
 
 li {
     list-style-type: none;
-    /* Убираем маркеры */
 }
 
 .input {
@@ -33,6 +32,6 @@ li {
 }
 
 .delete {
-    padding: 5px; 
+    padding: 5px;
     width: 32px;
 }

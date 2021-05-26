@@ -25,14 +25,13 @@ class App extends React.Component {
         isDone: false
       }
     ]
-
   }
 
   render() {
     let toDoFilter = this.state.toDo.filter(toDo => toDo.isDone === false);
 
     return (
-
+      
       <div className={styles.wrap}>
         <h2 className={styles.title}>Важные дела</h2>
         <InputItem />
