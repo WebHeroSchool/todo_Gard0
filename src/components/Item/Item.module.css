@@ -6,6 +6,7 @@ li {
     list-style-type: none;
     /* Убираем маркеры */
 }
+
 .input {
     display: flex;
     justify-content: center;
@@ -29,4 +30,9 @@ li {
     width: 300px;
     display: flex;
     justify-content: space-between
+}
+
+.delete {
+    padding: 5px; 
+    width: 32px;
 }
