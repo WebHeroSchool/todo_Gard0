@@ -2,17 +2,18 @@ import React from 'react';
 import Item from '../Item/Item.jsx';
 import styles from '../Item/Item.module.css';
 import Checkbox from '@material-ui/core/Checkbox';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
+// import FormControlLabel from '@material-ui/core/FormControlLabel';
 // import IconButton from '@material-ui/core/IconButton';
 // import Delete from '@material-ui/icons/Delete';
 
 
-const ItemList = ({ item }) => (
+const ItemList = ({ item, onClickDone }) => (
 
   <ul className={styles.list}>
     {item.map(item => (
-      <li key={item.id} className={styles.listItem}>
+      <li key={item.id} className={styles.listItem} onClickDone={onClickDone}>
         <Checkbox
+          onClick={() => onClickDone(item.isDone)}
           value="checked"
           inputProps={{
             'aria-label': 'primary checkbox'
