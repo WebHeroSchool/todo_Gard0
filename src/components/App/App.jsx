@@ -6,8 +6,9 @@ import Footer from '../Footer/Footer.jsx';
 
 
 class App extends React.Component {
-  render() {
-    const toDo = [
+
+  state = {
+    toDo: [
       {
         id: 1,
         value: 'Написать приложение',
@@ -24,20 +25,26 @@ class App extends React.Component {
         isDone: false
       }
     ]
+  }
 
-    let toDoFilter = toDo.filter(toDo => toDo.isDone === false);
-    let toDoList = toDoFilter.length;
+  onClickDone = isDone => console.log(isDone);
 
 
-
+  render() {
+  
+    // return (
+    //   <div className="">
+    //    <ItemList items={this.state.toDo} onClickDone={this.onClickDone} />
+    //   </div>
+    // )
     return (
-
+      
       <div className={styles.wrap}>
         <h2 className={styles.title}>Важные дела</h2>
         <InputItem />
         <div>
-          <ItemList item={toDo} />
-          <Footer count={toDoList} />
+          <ItemList items={this.state.toDo} onClickDone={this.onClickDone} />
+          <Footer count={this.state.toDo.filter(toDo => !toDo.isDone ).length} />
         </div>
       </div >
     );
