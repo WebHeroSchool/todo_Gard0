@@ -25,20 +25,26 @@ class App extends React.Component {
         isDone: false
       }
     ]
-
   }
 
+  onClickDone = isDone => console.log(isDone);
+
+
   render() {
-    let toDoFilter = this.state.toDo.filter(toDo => toDo.isDone === false);
-
+  
+    // return (
+    //   <div className="">
+    //    <ItemList items={this.state.toDo} onClickDone={this.onClickDone} />
+    //   </div>
+    // )
     return (
-
+      
       <div className={styles.wrap}>
         <h2 className={styles.title}>Важные дела</h2>
         <InputItem />
         <div>
-          <ItemList item={this.state.toDo} />
-          <Footer count={toDoFilter.length} />
+          <ItemList items={this.state.toDo} onClickDone={this.onClickDone} />
+          <Footer count={this.state.toDo.filter(toDo => !toDo.isDone ).length} />
         </div>
       </div >
     );
