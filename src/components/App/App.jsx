@@ -31,20 +31,16 @@ class App extends React.Component {
 
 
   render() {
-  
-    // return (
-    //   <div className="">
-    //    <ItemList items={this.state.toDo} onClickDone={this.onClickDone} />
-    //   </div>
-    // )
+
+
     return (
-      
+
       <div className={styles.wrap}>
         <h2 className={styles.title}>Важные дела</h2>
         <InputItem />
         <div>
           <ItemList items={this.state.toDo} onClickDone={this.onClickDone} />
-          <Footer count={this.state.toDo.filter(toDo => !toDo.isDone ).length} />
+          <Footer count={this.state.toDo.filter(toDo => !toDo.isDone).length} />
         </div>
       </div >
     );
