@@ -12,7 +12,7 @@ class App extends React.Component {
       {
         id: 1,
         value: 'Написать приложение',
-        isDone: true
+        isDone: false
       },
       {
         id: 2,
@@ -27,11 +27,18 @@ class App extends React.Component {
     ]
   }
 
-  onClickDone = isDone => console.log(isDone);
-
+  onClickDone = id => {
+    const newItemsList = this.state.toDo.map(item => {
+      const newItem = { ...item };
+      if (item.id === id) {
+        newItem.isDone = !item.isDone;
+      }
+      return newItem;
+    });
+    this.setState({ toDo: newItemsList });
+  };
 
   render() {
-
 
     return (
 
