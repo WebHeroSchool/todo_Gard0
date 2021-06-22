@@ -9,6 +9,7 @@ li {
 .input {
     display: flex;
     justify-content: center;
+    padding: 20px;
 }
 
 .inProgress {
