@@ -8,10 +8,11 @@ import styles from './Item.module.css';
 import classnames from 'classnames';
 
 
-const Item = ({ onClickDone, id, isDone, value }) => (
+const Item = ({ id, isDone, value, onClickDone, onClickDelete }) => (
   <ListItem>
     <Checkbox
-      onClick={() => onClickDone(id)} />
+      onClick={() => onClickDone(id)}
+    />
     <p
       className={classnames({
         [styles.inProgress]: false,
@@ -22,7 +23,10 @@ const Item = ({ onClickDone, id, isDone, value }) => (
     </p>
 
     <ListItemSecondaryAction>
-      <IconButton aria-label="New comment">
+      <IconButton
+        aria-label="delete"
+        onClick={() => onClickDelete(id)}
+      >
         <Delete />
       </IconButton>
     </ListItemSecondaryAction>
