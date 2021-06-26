@@ -16,12 +16,12 @@ class App extends React.Component {
       },
       {
         id: 2,
-        value: 'прописать props',
+        value: 'Прописать props',
         isDone: false
       },
       {
         id: 3,
-        value: 'сделать все дела',
+        value: 'Сделать все дела',
         isDone: false
       }
     ]
@@ -37,6 +37,12 @@ class App extends React.Component {
     });
     this.setState({ toDo: newItemsList });
   };
+  
+  onClickDelete = id => {
+    const itemListDelete = this.state.toDo.filter(item =>
+      item.id !== id);
+    this.setState({ toDo: itemListDelete });
+  };
 
   render() {
 
@@ -46,7 +52,7 @@ class App extends React.Component {
         <h2 className={styles.title}>Важные дела</h2>
         <InputItem />
         <div>
-          <ItemList items={this.state.toDo} onClickDone={this.onClickDone} />
+          <ItemList items={this.state.toDo} onClickDone={this.onClickDone} onClickDelete={this.onClickDelete} />
           <Footer count={this.state.toDo.filter(toDo => !toDo.isDone).length} />
         </div>
       </div >

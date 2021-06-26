@@ -3,11 +3,15 @@ import styles from '../Item/Item.module.css';
 import TextField from '@material-ui/core/TextField';
 
 const InputItem = () => (<div
-    className={styles.input}>
+className={styles.input}
+>
     <TextField
-        id="standard-dense"
+        id="standard-full-width"
         label="Добавить дело"
-        margin="dense"
+        margin="normal"
+        style={{ margin: 8 }}
+        fullWidth
+
     />
 </div>);
 
