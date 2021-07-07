@@ -11,17 +11,17 @@ class App extends React.Component {
     toDo: [
       {
         id: 1,
-        value: 'Написать приложение',
+        value: 'Дело 1',
         isDone: false
       },
       {
         id: 2,
-        value: 'Прописать props',
+        value: 'Дело 2',
         isDone: false
       },
       {
         id: 3,
-        value: 'Сделать все дела',
+        value: 'Дело 3',
         isDone: false
       }
     ]
@@ -31,29 +31,44 @@ class App extends React.Component {
     const newItemsList = this.state.toDo.map(item => {
       const newItem = { ...item };
       if (item.id === id) {
-        newItem.isDone = !item.isDone;
+        newItem.isDone = !item.isDone
       }
-      return newItem;
+      return newItem
     });
     this.setState({ toDo: newItemsList });
   };
-  
+
   onClickDelete = id => {
-    const itemListDelete = this.state.toDo.filter(item =>
-      item.id !== id);
+    const itemListDelete = this.state.toDo.filter(item => item.id !== id);
     this.setState({ toDo: itemListDelete });
   };
 
+  onClickAdd = value => this.setState(state => ({
+    toDo: [
+      ...state.toDo,
+      {
+        id: this.state.toDo.filter(toDo => !toDo.isDone).length + 1,
+        value,
+        isDone: false
+      }
+    ]
+  }));
 
   render() {
 
     return (
 
       <div className={styles.wrap}>
-        <h2 className={styles.title}>Важные дела</h2>
-        <InputItem />
+        <h2 className={styles.title}>Список задач</h2>
+        <InputItem
+          onClickAdd={this.onClickAdd}
+        />
         <div>
-          <ItemList items={this.state.toDo} onClickDone={this.onClickDone} onClickDelete={this.onClickDelete} />
+          <ItemList
+            items={this.state.toDo}
+            onClickDone={this.onClickDone}
+            onClickDelete={this.onClickDelete}
+          />
           <Footer count={this.state.toDo.filter(toDo => !toDo.isDone).length} />
         </div>
       </div >
