@@ -7,9 +7,12 @@ li {
 }
 
 .input {
-    display: flex;
-    justify-content: center;
-    padding: 20px;
+    width: 90%;
+    margin: 8px;
+}
+.input_button{
+    width: 100%;
+
 }
 
 .inProgress {
