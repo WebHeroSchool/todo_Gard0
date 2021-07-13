@@ -13,7 +13,7 @@ class InputItem extends React.Component {
         this.setState({
             inputValue: ''
         });
-        
+
         this.props.onClickAdd(this.state.inputValue);
     }
     render() {
@@ -28,6 +28,7 @@ class InputItem extends React.Component {
                     className={styles.input}
                     value={this.state.inputValue}
                     onChange={event => this.setState({ inputValue: event.target.value })}
+
 
                 />
                 <ListItem>

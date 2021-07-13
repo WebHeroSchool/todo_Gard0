@@ -8,7 +8,7 @@ import styles from './Item.module.css';
 import classnames from 'classnames';
 
 
-const Item = ({ id, isDone, value, onClickDone, onClickDelete }) => (
+const Item = ({ id, isDone, value, onClickDone, onClickDelete, index }) => (
   <ListItem>
     <Checkbox
       onClick={() => onClickDone(id)}
@@ -25,7 +25,7 @@ const Item = ({ id, isDone, value, onClickDone, onClickDelete }) => (
     <ListItemSecondaryAction>
       <IconButton
         aria-label="delete"
-        onClick={() => onClickDelete(id)}
+        onClick={() => onClickDelete(index)}
       >
         <Delete />
       </IconButton>
