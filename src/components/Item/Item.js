@@ -33,4 +33,8 @@ const Item = ({ id, isDone, value, onClickDone, onClickDelete, index }) => (
   </ListItem>
 );
 
+Item.defaultProps = {
+  value: 'у тебя нет дел'
+};
+
 export default Item;
