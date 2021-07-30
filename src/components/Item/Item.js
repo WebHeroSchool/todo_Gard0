@@ -35,7 +35,13 @@ const Item = ({ id, isDone, value, onClickDone, onClickDelete }) => (
 );
 
 Item.defaultProps = {
-  value: 'у тебя нет дел'
+  value: 'у тебя нет дел',
+  isDone: false
+};
+Item.propTypes = {
+
+  value: PropTypes.string,
+  isDone: PropTypes.bool
 };
 
 Item.propTypes = {
