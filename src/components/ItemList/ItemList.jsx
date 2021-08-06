@@ -13,7 +13,7 @@ const ItemList = ({ items, onClickDone, onClickDelete }) => (
           id={item.id}
           onClickDone={onClickDone}
           onClickDelete={onClickDelete}
-        // index={index} 
+          index={index}
         />
       </a>
     ))}

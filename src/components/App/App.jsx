@@ -28,8 +28,7 @@ class App extends React.Component {
         value: 'Дело 3',
         isDone: false
       }
-    ],
-    count: 3
+    ]
   }
 
   onClickDone = (id) => {
@@ -43,8 +42,8 @@ class App extends React.Component {
     this.setState({ toDo: newItemsList });
   };
 
-  onClickDelete = (id) => {
-    const itemListDelete = this.state.toDo.filter((item, idDelete) => idDelete !== id);
+  onClickDelete = (index) => {
+    const itemListDelete = this.state.toDo.filter((item, indexDelete) => indexDelete !== index);
     this.setState({ toDo: itemListDelete });
   };
 
@@ -56,7 +55,7 @@ class App extends React.Component {
           ...state.toDo,
           {
             value,
-            isDone: false,
+            isDone: false
           }
         ]
       }));
@@ -74,7 +73,7 @@ class App extends React.Component {
         {this.state.error && <Alert severity="warning">{this.state.error}</Alert>}
         <h2 className={styles.title}>Список задач</h2>
         <InputItem
-          onClickAdd={this.onClickAdd} // props свойства
+          onClickAdd={this.onClickAdd}
         />
         <div>
           <ItemList
