@@ -10,18 +10,15 @@ import PropTypes from 'prop-types';
 
 class Item extends React.Component {
 
-  componentWillMount() {
-    console.log('componentWillMount');
-  }
+
   componentDidMount() {
-    console.log('componentDidMount');
-  }
-  componentDidUpdate() {
-    console.log('componentDidUpdate');
-  }
+    this.timerId = setInterval(() => console.log('leak test'), 1000);
+  };
+
   componentWillUnmount() {
-    console.log('componentWillUnmount');
-  }
+    clearInterval(this.timerId);
+  };
+
 
   render() {
 
