@@ -19,7 +19,6 @@ class Item extends React.Component {
     clearInterval(this.timerId);
   };
 
-
   render() {
 
     const { id, isDone, value, onClickDone, onClickDelete, index } = this.props;
