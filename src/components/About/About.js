@@ -1,5 +1,5 @@
 import React from "react";
 
-const About = ()=> (<h1>Обо мне</h1>);
+const About = ()=> (<h2>Обо мне</h2>);
 
 export default About;
